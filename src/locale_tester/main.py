@@ -492,7 +492,7 @@ class LocaleTesterApp(Adw.Application):
             website="https://github.com/yeager/locale-tester",
             issue_url="https://github.com/yeager/locale-tester/issues",
             comments=_("A localization tool by Daniel Nylander"),
-            translator_credits=_("Translate this app: https://app.transifex.com/linguaedit/locale-tester/"),
+            translator_credits=_("Translate this app: https://app.transifex.com/danielnylander/locale-tester/"),
         )
         about.present()
 

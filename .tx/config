@@ -1,7 +1,7 @@
 [main]
 host = https://app.transifex.com
 
-[o:linguaedit:p:locale-tester:r:locale-tester-pot]
+[o:danielnylander:p:locale-tester:r:locale-tester-pot]
 file_filter = po/<lang>.po
 source_file = po/locale-tester.pot
 source_lang = en

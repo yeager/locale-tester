@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=68.0", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "locale-tester"
+version = "0.1.0"
+description = "GTK4/Adwaita app for testing and comparing locale behavior on Linux"
+readme = "README.md"
+license = "GPL-3.0-or-later"
+requires-python = ">=3.10"
+authors = [
+    { name = "Daniel Nylander", email = "daniel@danielnylander.se" },
+]
+keywords = ["locale", "i18n", "l10n", "gtk4", "adwaita", "linux"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: X11 Applications :: GTK",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
+    "Programming Language :: Python :: 3",
+    "Topic :: Software Development :: Internationalization",
+    "Topic :: Software Development :: Localization",
+]
+dependencies = [
+    "PyGObject>=3.42",
+]
+
+[project.urls]
+Homepage = "https://github.com/yeager/locale-tester"
+Issues = "https://github.com/yeager/locale-tester/issues"
+
+[project.gui-scripts]
+locale-tester = "locale_tester.main:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

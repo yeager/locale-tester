@@ -316,6 +316,12 @@ class LocaleTesterWindow(Adw.ApplicationWindow):
         switcher_title = Adw.ViewSwitcherTitle(stack=self.view_stack)
         header.set_title_widget(switcher_title)
 
+        # About button via menu
+        menu = Gio.Menu.new()
+        menu.append(_("About Locale Tester"), "app.about")
+        menu_btn = Gtk.MenuButton(icon_name="open-menu-symbolic", menu_model=menu)
+        header.pack_end(menu_btn)
+
         # Main layout
         main_box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
         main_box.append(header)
@@ -463,12 +469,32 @@ class LocaleTesterWindow(Adw.ApplicationWindow):
 class LocaleTesterApp(Adw.Application):
     def __init__(self):
         super().__init__(application_id=APP_ID, flags=Gio.ApplicationFlags.FLAGS_NONE)
+        about_action = Gio.SimpleAction.new("about", None)
+        about_action.connect("activate", self._on_about)
+        self.add_action(about_action)
 
     def do_activate(self):
         win = self.get_active_window()
         if not win:
             win = LocaleTesterWindow(self)
         win.present()
+
+    def _on_about(self, action, param):
+        about = Adw.AboutWindow(
+            transient_for=self.props.active_window,
+            application_name=_("Locale Tester"),
+            application_icon="locale-tester",
+            version="0.1.0",
+            developer_name="Daniel Nylander",
+            developers=["Daniel Nylander <daniel@danielnylander.se>"],
+            copyright="© 2026 Daniel Nylander",
+            license_type=Gtk.License.GPL_3_0,
+            website="https://github.com/yeager/locale-tester",
+            issue_url="https://github.com/yeager/locale-tester/issues",
+            comments=_("A localization tool by Daniel Nylander"),
+            translator_credits=_("Translate this app: https://app.transifex.com/linguaedit/locale-tester/"),
+        )
+        about.present()
 
 
 def main():

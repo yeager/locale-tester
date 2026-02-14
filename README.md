@@ -50,7 +50,7 @@ locale-tester
 
 ## Translating
 
-Translations are managed via [Transifex](https://app.transifex.com/yeager/locale-tester/).
+Translations are managed via [Transifex](https://app.transifex.com/danielnylander/locale-tester/).
 
 To generate the POT file:
 

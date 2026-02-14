@@ -1,0 +1,151 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Daniel Nylander
+# This file is distributed under the same license as the locale-tester package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Daniel Nylander <po@danielnylander.se>, 2026
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: locale-tester 0.1.0\n"
+"Report-Msgid-Bugs-To: daniel@danielnylander.se\n"
+"POT-Creation-Date: 2026-02-14 09:47+0100\n"
+"PO-Revision-Date: 2026-02-14 09:50+0000\n"
+"Last-Translator: Daniel Nylander <po@danielnylander.se>, 2026\n"
+"Language-Team: Swedish (https://app.transifex.com/danielnylander/teams/304767/sv/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: sv\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: src/locale_tester/main.py:102
+msgid "(not used)"
+msgstr "(används inte)"
+
+#: src/locale_tester/main.py:109
+msgid "(none)"
+msgstr "(ingen)"
+
+#: src/locale_tester/main.py:148 src/locale_tester/main.py:421
+msgid "(unset)"
+msgstr "(inte inställd)"
+
+#: src/locale_tester/main.py:251
+#, python-format
+msgid "Could not set locale: %s"
+msgstr "Kunde inte ställa in locale: %s"
+
+#: src/locale_tester/main.py:258
+msgid "Date (short)"
+msgstr "Datum (kort)"
+
+#: src/locale_tester/main.py:259
+msgid "Date (long)"
+msgstr "Datum (långt)"
+
+#: src/locale_tester/main.py:260
+msgid "Yesterday"
+msgstr "Igår"
+
+#: src/locale_tester/main.py:261
+msgid "Time"
+msgstr "Tid"
+
+#: src/locale_tester/main.py:263
+msgid "Number (1 234 567.89)"
+msgstr "Tal (1 234 567.89)"
+
+#: src/locale_tester/main.py:264
+msgid "Currency"
+msgstr "Valuta"
+
+#: src/locale_tester/main.py:265
+msgid "Percent"
+msgstr "Procent"
+
+#: src/locale_tester/main.py:266
+msgid "Decimal point"
+msgstr "Decimalpunkt"
+
+#: src/locale_tester/main.py:267
+msgid "Thousands separator"
+msgstr "Tusentalsavgränsare"
+
+#: src/locale_tester/main.py:268
+msgid "Currency symbol"
+msgstr "Valutasymbol"
+
+#: src/locale_tester/main.py:270
+msgid "AM / PM"
+msgstr "Förmiddag / Eftermiddag"
+
+#: src/locale_tester/main.py:271
+msgid "Weekday names"
+msgstr "Veckodagar"
+
+#: src/locale_tester/main.py:272
+msgid "Month names"
+msgstr "Månadsnamn"
+
+#: src/locale_tester/main.py:274
+msgid "Collation order"
+msgstr "Sorteringsordning"
+
+#: src/locale_tester/main.py:308
+msgid "Locale Tester"
+msgstr "Locale-testare"
+
+#: src/locale_tester/main.py:329
+msgid "Inspect"
+msgstr "Inspektera"
+
+#: src/locale_tester/main.py:333
+msgid "Locale A"
+msgstr "Locale A"
+
+#: src/locale_tester/main.py:334
+msgid "Locale B"
+msgstr "Locale B"
+
+#: src/locale_tester/main.py:339
+msgid "Compare"
+msgstr "Jämför"
+
+#: src/locale_tester/main.py:348
+msgid "Test strftime format strings under a chosen locale."
+msgstr "Testa strftime-formatsträngar för en vald locale."
+
+#: src/locale_tester/main.py:354
+msgid "Locale:"
+msgstr "Locale:"
+
+#: src/locale_tester/main.py:369
+msgid "Format:"
+msgstr "Format:"
+
+#: src/locale_tester/main.py:375
+msgid "Test"
+msgstr "Testa"
+
+#: src/locale_tester/main.py:401
+msgid "strftime"
+msgstr "strftime"
+
+#: src/locale_tester/main.py:410
+msgid "Current LC_* environment variables:"
+msgstr "Aktuella LC_*-miljövariabler:"
+
+#: src/locale_tester/main.py:433
+msgid "Environment"
+msgstr "Miljö"
+
+#: desktop file
+msgid "Test and compare locale settings"
+msgstr "Testa och jämför inställningar för lokalanpassning"
+
+#: desktop file
+msgid "locale;l10n;i18n;testing;"
+msgstr "locale;l10n;i18n;testning;"

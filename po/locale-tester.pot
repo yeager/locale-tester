@@ -137,3 +137,11 @@ msgstr ""
 #: src/locale_tester/main.py:433
 msgid "Environment"
 msgstr ""
+
+#: desktop file
+msgid "Test and compare locale settings"
+msgstr ""
+
+#: desktop file
+msgid "locale;l10n;i18n;testing;"
+msgstr ""

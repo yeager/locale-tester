@@ -1,0 +1,9 @@
+[Desktop Entry]
+_Name=Locale Tester
+_Comment=Test and compare locale settings
+Exec=locale-tester
+Icon=locale-tester
+Terminal=false
+Type=Application
+Categories=Development;Translation;
+_Keywords=locale;l10n;i18n;testing;

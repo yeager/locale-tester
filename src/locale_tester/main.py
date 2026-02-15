@@ -558,6 +558,10 @@ class LocaleTesterApp(Adw.Application):
         about_action.connect("activate", self._on_about)
         self.add_action(about_action)
 
+        notif_action = Gio.SimpleAction.new("toggle-notifications", None)
+        notif_action.connect("activate", lambda *_: _save_notify_config({"enabled": not _load_notify_config().get("enabled", False)}))
+        self.add_action(notif_action)
+
     def do_startup(self):
         Adw.Application.do_startup(self)
         self.set_accels_for_action("app.quit", ["<Control>q"])

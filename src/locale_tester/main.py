@@ -4,6 +4,7 @@
 
 """Locale Tester — see how dates, numbers, currency, and sorting look in different locales."""
 
+import csv
 import sys
 import os
 import locale
@@ -11,6 +12,7 @@ import subprocess
 import ctypes
 import ctypes.util
 import gettext
+import json
 import datetime
 import textwrap
 
@@ -190,7 +192,6 @@ def strftime_test(loc, fmt):
 import json as _json
 import platform as _platform
 from pathlib import Path as _Path
-from datetime import datetime as _dt_now
 
 _NOTIFY_APP = "locale-tester"
 

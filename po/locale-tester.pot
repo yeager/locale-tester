@@ -6,9 +6,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: locale-tester 0.1.0\n"
+"Project-Id-Version: locale-tester\n"
 "Report-Msgid-Bugs-To: daniel@danielnylander.se\n"
-"POT-Creation-Date: 2026-02-14 09:47+0100\n"
+"POT-Creation-Date: 2026-02-15 09:49+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,131 +17,136 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/locale_tester/main.py:102
+#: src/locale_tester/main.py:105
 msgid "(not used)"
 msgstr ""
 
-#: src/locale_tester/main.py:109
+#: src/locale_tester/main.py:112
 msgid "(none)"
 msgstr ""
 
-#: src/locale_tester/main.py:148 src/locale_tester/main.py:421
+#: src/locale_tester/main.py:151 src/locale_tester/main.py:430
 msgid "(unset)"
 msgstr ""
 
-#: src/locale_tester/main.py:251
+#: src/locale_tester/main.py:254
 #, python-format
 msgid "Could not set locale: %s"
 msgstr ""
 
-#: src/locale_tester/main.py:258
+#: src/locale_tester/main.py:261
 msgid "Date (short)"
 msgstr ""
 
-#: src/locale_tester/main.py:259
+#: src/locale_tester/main.py:262
 msgid "Date (long)"
 msgstr ""
 
-#: src/locale_tester/main.py:260
+#: src/locale_tester/main.py:263
 msgid "Yesterday"
 msgstr ""
 
-#: src/locale_tester/main.py:261
+#: src/locale_tester/main.py:264
 msgid "Time"
 msgstr ""
 
-#: src/locale_tester/main.py:263
+#: src/locale_tester/main.py:266
 msgid "Number (1 234 567.89)"
 msgstr ""
 
-#: src/locale_tester/main.py:264
+#: src/locale_tester/main.py:267
 msgid "Currency"
 msgstr ""
 
-#: src/locale_tester/main.py:265
+#: src/locale_tester/main.py:268
 msgid "Percent"
 msgstr ""
 
-#: src/locale_tester/main.py:266
+#: src/locale_tester/main.py:269
 msgid "Decimal point"
 msgstr ""
 
-#: src/locale_tester/main.py:267
+#: src/locale_tester/main.py:270
 msgid "Thousands separator"
 msgstr ""
 
-#: src/locale_tester/main.py:268
+#: src/locale_tester/main.py:271
 msgid "Currency symbol"
 msgstr ""
 
-#: src/locale_tester/main.py:270
+#: src/locale_tester/main.py:273
 msgid "AM / PM"
 msgstr ""
 
-#: src/locale_tester/main.py:271
+#: src/locale_tester/main.py:274
 msgid "Weekday names"
 msgstr ""
 
-#: src/locale_tester/main.py:272
+#: src/locale_tester/main.py:275
 msgid "Month names"
 msgstr ""
 
-#: src/locale_tester/main.py:274
+#: src/locale_tester/main.py:277
 msgid "Collation order"
 msgstr ""
 
-#: src/locale_tester/main.py:308
+#: src/locale_tester/main.py:311 src/locale_tester/main.py:488
 msgid "Locale Tester"
 msgstr ""
 
-#: src/locale_tester/main.py:329
+#: src/locale_tester/main.py:324
+msgid "About Locale Tester"
+msgstr ""
+
+#: src/locale_tester/main.py:338
 msgid "Inspect"
 msgstr ""
 
-#: src/locale_tester/main.py:333
+#: src/locale_tester/main.py:342
 msgid "Locale A"
 msgstr ""
 
-#: src/locale_tester/main.py:334
+#: src/locale_tester/main.py:343
 msgid "Locale B"
 msgstr ""
 
-#: src/locale_tester/main.py:339
+#: src/locale_tester/main.py:348
 msgid "Compare"
 msgstr ""
 
-#: src/locale_tester/main.py:348
+#: src/locale_tester/main.py:357
 msgid "Test strftime format strings under a chosen locale."
 msgstr ""
 
-#: src/locale_tester/main.py:354
+#: src/locale_tester/main.py:363
 msgid "Locale:"
 msgstr ""
 
-#: src/locale_tester/main.py:369
+#: src/locale_tester/main.py:378
 msgid "Format:"
 msgstr ""
 
-#: src/locale_tester/main.py:375
+#: src/locale_tester/main.py:384
 msgid "Test"
 msgstr ""
 
-#: src/locale_tester/main.py:401
+#: src/locale_tester/main.py:410
 msgid "strftime"
 msgstr ""
 
-#: src/locale_tester/main.py:410
+#: src/locale_tester/main.py:419
 msgid "Current LC_* environment variables:"
 msgstr ""
 
-#: src/locale_tester/main.py:433
+#: src/locale_tester/main.py:442
 msgid "Environment"
 msgstr ""
 
-#: desktop file
-msgid "Test and compare locale settings"
+#: src/locale_tester/main.py:497
+msgid "A localization tool by Daniel Nylander"
 msgstr ""
 
-#: desktop file
-msgid "locale;l10n;i18n;testing;"
+#: src/locale_tester/main.py:498
+msgid ""
+"Translate this app: https://app.transifex.com/danielnylander/locale-tester/"
 msgstr ""

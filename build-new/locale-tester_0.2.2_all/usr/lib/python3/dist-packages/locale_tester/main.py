@@ -23,7 +23,10 @@ APP_ID = "se.danielnylander.LocaleTester"
 GETTEXT_DOMAIN = "locale-tester"
 
 # i18n
-gettext.bindtextdomain(GETTEXT_DOMAIN, os.path.join(os.path.dirname(__file__), "..", "..", "po"))
+_locale_dir = os.path.join(os.path.dirname(__file__), "..", "..", "po")
+if not os.path.isdir(_locale_dir):
+    _locale_dir = "/usr/share/locale"
+gettext.bindtextdomain(GETTEXT_DOMAIN, _locale_dir)
 gettext.textdomain(GETTEXT_DOMAIN)
 _ = gettext.gettext
 

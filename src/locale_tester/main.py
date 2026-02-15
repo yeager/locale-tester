@@ -379,6 +379,12 @@ class LocaleTesterWindow(Adw.ApplicationWindow):
         menu_btn = Gtk.MenuButton(icon_name="open-menu-symbolic", menu_model=menu)
         header.pack_end(menu_btn)
 
+        # Export button
+        export_btn = Gtk.Button(icon_name="document-save-symbolic",
+                                tooltip_text=_("Export data"))
+        export_btn.connect("clicked", self._on_export_clicked)
+        header.pack_end(export_btn)
+
         # Theme toggle
         self._theme_btn = Gtk.Button(icon_name="weather-clear-night-symbolic",
                                      tooltip_text="Toggle dark/light theme")
@@ -537,6 +543,46 @@ class LocaleTesterWindow(Adw.ApplicationWindow):
 
 
 
+    def _on_export_clicked(self, *_args):
+        dialog = Adw.MessageDialog(transient_for=self,
+                                   heading=_("Export Data"),
+                                   body=_("Choose export format:"))
+        dialog.add_response("cancel", _("Cancel"))
+        dialog.add_response("csv", "CSV")
+        dialog.add_response("json", "JSON")
+        dialog.set_response_appearance("csv", Adw.ResponseAppearance.SUGGESTED)
+        dialog.connect("response", self._on_export_format_chosen)
+        dialog.present()
+
+    def _on_export_format_chosen(self, dialog, response):
+        if response not in ("csv", "json"):
+            return
+        self._export_fmt = response
+        fd = Gtk.FileDialog()
+        fd.set_initial_name(f"locale-test.{response}")
+        fd.save(self, None, self._on_export_save)
+
+    def _on_export_save(self, dialog, result):
+        try:
+            path = dialog.save_finish(result).get_path()
+        except Exception:
+            return
+        loc = self.single_panel.get_selected_locale()
+        if not loc:
+            return
+        info = locale_info(loc)
+        if not info:
+            return
+        data = [{"locale": loc, "key": k, "value": str(v)} for k, v in info.items()]
+        if self._export_fmt == "csv":
+            with open(path, "w", newline="", encoding="utf-8") as f:
+                w = csv.DictWriter(f, fieldnames=["locale", "key", "value"])
+                w.writeheader()
+                w.writerows(data)
+        else:
+            with open(path, "w", encoding="utf-8") as f:
+                json.dump(data, f, ensure_ascii=False, indent=2)
+
     def _on_theme_toggle(self, _btn):
         sm = Adw.StyleManager.get_default()
         if sm.get_color_scheme() == Adw.ColorScheme.FORCE_DARK:
@@ -568,9 +614,11 @@ class LocaleTesterApp(Adw.Application):
         self.set_accels_for_action("app.quit", ["<Control>q"])
         self.set_accels_for_action("app.refresh", ["F5"])
         self.set_accels_for_action("app.shortcuts", ["<Control>slash"])
+        self.set_accels_for_action("app.export", ["<Control>e"])
         for n, cb in [("quit", lambda *_: self.quit()),
                       ("refresh", lambda *_: self._do_refresh()),
-                      ("shortcuts", self._show_shortcuts_window)]:
+                      ("shortcuts", self._show_shortcuts_window),
+                      ("export", lambda *_: self.get_active_window() and self.get_active_window()._on_export_clicked())]:
             a = Gio.SimpleAction.new(n, None); a.connect("activate", cb); self.add_action(a)
 
     def _do_refresh(self):

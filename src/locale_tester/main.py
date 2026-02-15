@@ -494,6 +494,7 @@ class LocaleTesterApp(Adw.Application):
             license_type=Gtk.License.GPL_3_0,
             website="https://github.com/yeager/locale-tester",
             issue_url="https://github.com/yeager/locale-tester/issues",
+            translate_url="https://app.transifex.com/danielnylander/locale-tester/",
             comments=_("A localization tool by Daniel Nylander"),
             translator_credits=_("Translate this app: https://app.transifex.com/danielnylander/locale-tester/"),
         )

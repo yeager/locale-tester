@@ -552,6 +552,8 @@ class LocaleTesterWindow(Adw.ApplicationWindow):
 class LocaleTesterApp(Adw.Application):
     def __init__(self):
         super().__init__(application_id=APP_ID, flags=Gio.ApplicationFlags.FLAGS_NONE)
+        if HAS_NOTIFY:
+            _Notify.init("locale-tester")
         about_action = Gio.SimpleAction.new("about", None)
         about_action.connect("activate", self._on_about)
         self.add_action(about_action)
@@ -603,6 +605,8 @@ class LocaleTesterApp(Adw.Application):
             comments=_("A localization tool by Daniel Nylander"),
             translator_credits=_("Translate this app: https://app.transifex.com/danielnylander/locale-tester/"),
         )
+        about.set_debug_info(_get_system_info())
+        about.set_debug_info_filename("locale-tester-debug.txt")
         about.present()
 
 

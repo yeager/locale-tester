@@ -2,11 +2,9 @@
 Name=Locale Tester
 Name[sv]=Locale-testare
 Comment=Test and compare locale settings
-Comment[sv]=Testa och jämför locale-inställningar
 Exec=locale-tester
 Icon=locale-tester
 Terminal=false
 Type=Application
 Categories=Development;Translation;
 Keywords=locale;l10n;i18n;testing;
-Keywords[sv]=locale;l10n;i18n;testning;

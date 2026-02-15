@@ -1,3 +1,3 @@
 """Locale Tester - GTK4/Adwaita app for testing and comparing locales."""
 
-__version__ = "0.2.4"
+__version__ = "0.2.5"

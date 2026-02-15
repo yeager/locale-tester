@@ -48,16 +48,26 @@ On Debian/Ubuntu: `sudo apt install python3-gi gir1.2-gtk-4.0 gir1.2-adw-1`
 locale-tester
 ```
 
-## Translating
+## 🌍 Contributing Translations
 
-Translations are managed via [Transifex](https://app.transifex.com/danielnylander/locale-tester/).
+Help translate this app into your language! All translations are managed via Transifex.
 
-To generate the POT file:
+**→ [Translate on Transifex](https://app.transifex.com/danielnylander/locale-tester/)**
 
-```bash
-xgettext --language=Python --keyword=_ --output=po/locale-tester.pot src/locale_tester/main.py
-```
+### How to contribute:
+1. Visit the [Transifex project page](https://app.transifex.com/danielnylander/locale-tester/)
+2. Create a free account (or log in)
+3. Select your language and start translating
 
+### Currently supported languages:
+Arabic, Czech, Danish, German, Spanish, Finnish, French, Italian, Japanese, Korean, Norwegian Bokmål, Dutch, Polish, Brazilian Portuguese, Russian, Swedish, Ukrainian, Chinese (Simplified)
+
+### Notes:
+- Please do **not** submit pull requests with .po file changes — they are synced automatically from Transifex
+- Source strings are pushed to Transifex daily via GitHub Actions
+- Translations are pulled back and included in releases
+
+New language? Open an [issue](https://github.com/yeager/locale-tester/issues) and we'll add it!
 ## License
 
 GPL-3.0-or-later. See [LICENSE](LICENSE).

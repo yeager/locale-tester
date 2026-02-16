@@ -643,8 +643,7 @@ class LocaleTesterApp(Adw.Application):
         win.present()
 
     def _on_about(self, action, param):
-        about = Adw.AboutWindow(
-            transient_for=self.props.active_window,
+        about = Adw.AboutDialog(
             application_name=_("Locale Tester"),
             application_icon="locale-tester",
             version="0.1.0",
@@ -660,7 +659,7 @@ class LocaleTesterApp(Adw.Application):
         )
         about.set_debug_info(_get_system_info())
         about.set_debug_info_filename("locale-tester-debug.txt")
-        about.present()
+        about.present(self.props.active_window)
 
 
 def main():

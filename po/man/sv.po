@@ -25,7 +25,7 @@ msgstr ""
 #: data/man/locale-tester.1:1
 #, no-wrap
 msgid "LOCALE-TESTER"
-msgstr ""
+msgstr "LOCALE-TESTER"
 
 #. type: TH
 #: data/man/locale-tester.1:1
@@ -43,7 +43,7 @@ msgstr "Daniel Nylander"
 #: data/man/locale-tester.1:1
 #, no-wrap
 msgid "Locale Tester Manual"
-msgstr ""
+msgstr "Manual för Locale Tester"
 
 #. type: SH
 #: data/man/locale-tester.1:2
@@ -54,7 +54,7 @@ msgstr "NAMN"
 #. type: Plain text
 #: data/man/locale-tester.1:4
 msgid "locale-tester - Test and compare locale settings"
-msgstr ""
+msgstr "locale-tester - Testa och jämför locale-inställningar"
 
 #. type: SH
 #: data/man/locale-tester.1:4
@@ -65,7 +65,7 @@ msgstr "SYNOPSIS"
 #. type: Plain text
 #: data/man/locale-tester.1:6
 msgid "B<locale-tester>"
-msgstr ""
+msgstr "B<locale-tester>"
 
 #. type: SH
 #: data/man/locale-tester.1:6
@@ -82,6 +82,12 @@ msgid ""
 "separators, allows side-by-side locale comparison, includes a strftime "
 "tester, and shows LC_* environment variable overview."
 msgstr ""
+"B<locale-tester> är ett GTK4/Adwaita-program för att inspektera och jämföra "
+"systemets inställningar för lokalanpassningar på Linux. Det visar datum, "
+"tid, siffror, valuta, procent, sorteringsordning, veckodagar och månadsnamn, "
+"decimal- och tusentalsavgränsare, möjliggör jämförelse av lokala "
+"inställningar sida vid sida, innehåller en strftime-testare och visar en "
+"översikt över LC_*-miljövariabler."
 
 #. type: SH
 #: data/man/locale-tester.1:8
@@ -93,12 +99,12 @@ msgstr "FLAGGOR"
 #: data/man/locale-tester.1:9
 #, no-wrap
 msgid "B<--help>"
-msgstr ""
+msgstr "B<--help>"
 
 #. type: Plain text
 #: data/man/locale-tester.1:12
 msgid "Show help message and exit."
-msgstr ""
+msgstr "Visa hjälpmeddelande och avsluta."
 
 #. type: SH
 #: data/man/locale-tester.1:12
@@ -110,7 +116,7 @@ msgstr "FILER"
 #: data/man/locale-tester.1:13
 #, no-wrap
 msgid "I<~/.config/locale-tester/>"
-msgstr ""
+msgstr "I<~/.config/locale-tester/>"
 
 #. type: Plain text
 #: data/man/locale-tester.1:16
@@ -121,7 +127,7 @@ msgstr "Konfigurationsfiler."
 #: data/man/locale-tester.1:16
 #, no-wrap
 msgid "I<~/.cache/locale-tester/>"
-msgstr ""
+msgstr "I<~/.cache/locale-tester/>"
 
 #. type: Plain text
 #: data/man/locale-tester.1:19
@@ -137,7 +143,7 @@ msgstr "BUGGAR"
 #. type: Plain text
 #: data/man/locale-tester.1:21
 msgid "Report bugs at https://github.com/yeager/locale-tester/issues"
-msgstr ""
+msgstr "Rapportera buggar på https://github.com/yeager/locale-tester/issues"
 
 #. type: SH
 #: data/man/locale-tester.1:21
@@ -159,4 +165,4 @@ msgstr "SE ÄVEN"
 #. type: Plain text
 #: data/man/locale-tester.1:24
 msgid "Project homepage: https://github.com/yeager/locale-tester"
-msgstr ""
+msgstr "Projektets webbsida: https://github.com/yeager/locale-tester"

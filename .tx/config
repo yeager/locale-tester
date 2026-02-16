@@ -1,5 +1,5 @@
 [main]
-host = https://app.transifex.com
+host = https://www.transifex.com
 
 [o:danielnylander:p:locale-tester:r:locale-tester-pot]
 file_filter = po/<lang>.po

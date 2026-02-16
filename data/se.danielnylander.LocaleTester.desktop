@@ -1,5 +1,6 @@
 [Desktop Entry]
 Name=Locale Tester
+Name[sv]=Locale-testare
 Comment=Test and compare locale settings
 Exec=locale-tester
 Icon=locale-tester

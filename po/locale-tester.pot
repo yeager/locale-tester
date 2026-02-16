@@ -150,3 +150,11 @@ msgstr ""
 msgid ""
 "Translate this app: https://app.transifex.com/danielnylander/locale-tester/"
 msgstr ""
+
+#: locale-tester/data/se.danielnylander.LocaleTester.desktop.in
+msgid "Test and compare locale settings"
+msgstr ""
+
+#: locale-tester/data/se.danielnylander.LocaleTester.desktop.in
+msgid "locale;l10n;i18n;testing;"
+msgstr ""

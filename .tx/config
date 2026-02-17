@@ -6,9 +6,3 @@ file_filter = po/<lang>.po
 source_file = po/locale-tester.pot
 source_lang = en
 type = PO
-
-[o:danielnylander:p:locale-tester:r:locale-tester-man]
-file_filter  = po/man/<lang>.po
-source_file  = po/man/locale-tester.1.pot
-source_lang  = en
-type         = PO

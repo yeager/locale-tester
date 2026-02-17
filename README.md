@@ -1,5 +1,9 @@
 # Locale Tester
 
+## Screenshot
+
+![Ubuntu L10n](screenshots/main.png)
+
 A GTK4/Adwaita application for inspecting and comparing system locale settings on Linux.
 
 ![Screenshot](data/screenshots/screenshot-01.png)

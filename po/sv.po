@@ -104,7 +104,7 @@ msgstr "Om Locale-testare"
 
 #: src/locale_tester/main.py:384
 msgid "Export data"
-msgstr ""
+msgstr "Exportera data"
 
 #: src/locale_tester/main.py:404
 msgid "Inspect"
@@ -152,15 +152,15 @@ msgstr "Miljö"
 
 #: src/locale_tester/main.py:548
 msgid "Export Data"
-msgstr ""
+msgstr "Exportera data"
 
 #: src/locale_tester/main.py:549
 msgid "Choose export format:"
-msgstr ""
+msgstr "Välj exportformat:"
 
 #: src/locale_tester/main.py:550
 msgid "Cancel"
-msgstr ""
+msgstr "Avbryt"
 
 #: src/locale_tester/main.py:657
 msgid "A localization tool by Daniel Nylander"

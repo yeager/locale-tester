@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "locale-tester"
-version = "0.2.6"
+version = "0.2.7"
 description = "GTK4/Adwaita app for testing and comparing locale behavior on Linux"
 readme = "README.md"
 license = "GPL-3.0-or-later"

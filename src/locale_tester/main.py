@@ -655,7 +655,7 @@ class LocaleTesterApp(Adw.Application):
             issue_url="https://github.com/yeager/locale-tester/issues",
             translate_url="https://app.transifex.com/danielnylander/locale-tester/",
             comments=_("A localization tool by Daniel Nylander"),
-            translator_credits=_("Translate this app: https://app.transifex.com/danielnylander/locale-tester/"),
+            translator_credits=_("Translate this app: https://www.transifex.com/danielnylander/locale-tester/"),
         )
         about.set_debug_info(_get_system_info())
         about.set_debug_info_filename("locale-tester-debug.txt")

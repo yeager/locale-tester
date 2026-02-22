@@ -39,7 +39,6 @@ gettext.bindtextdomain(GETTEXT_DOMAIN, _locale_dir)
 gettext.textdomain(GETTEXT_DOMAIN)
 _ = gettext.gettext
 
-
 # ---------------------------------------------------------------------------
 # Locale helpers
 # ---------------------------------------------------------------------------
@@ -52,7 +51,6 @@ def get_available_locales():
     except Exception:
         return ["C", "POSIX", "en_US.UTF-8"]
 
-
 def safe_setlocale(cat, loc):
     """Try to set locale category, return True on success."""
     try:
@@ -60,7 +58,6 @@ def safe_setlocale(cat, loc):
         return True
     except locale.Error:
         return False
-
 
 def locale_info(loc):
     """Gather locale information for *loc* and return a dict."""
@@ -167,7 +164,6 @@ def locale_info(loc):
 
     return info
 
-
 def strftime_test(loc, fmt):
     """Test a strftime format string under a given locale."""
     old = locale.getlocale(locale.LC_ALL)
@@ -183,11 +179,9 @@ def strftime_test(loc, fmt):
         locale.setlocale(locale.LC_ALL, "")
     return result
 
-
 # ---------------------------------------------------------------------------
 # Locale info panel widget
 # ---------------------------------------------------------------------------
-
 
 import json as _json
 import platform as _platform
@@ -195,10 +189,8 @@ from pathlib import Path as _Path
 
 _NOTIFY_APP = "locale-tester"
 
-
 def _notify_config_path():
     return _Path(GLib.get_user_config_dir()) / _NOTIFY_APP / "notifications.json"
-
 
 def _load_notify_config():
     try:
@@ -206,12 +198,10 @@ def _load_notify_config():
     except Exception:
         return {"enabled": False}
 
-
 def _save_notify_config(config):
     p = _notify_config_path()
     p.parent.mkdir(parents=True, exist_ok=True)
     p.write_text(_json.dumps(config))
-
 
 def _send_notification(summary, body="", icon="dialog-information"):
     if HAS_NOTIFY and _load_notify_config().get("enabled"):
@@ -220,7 +210,6 @@ def _send_notification(summary, body="", icon="dialog-information"):
             n.show()
         except Exception:
             pass
-
 
 def _get_system_info():
     return "\n".join([
@@ -231,7 +220,6 @@ def _get_system_info():
         f"Python: {_platform.python_version()}",
         f"OS: {_platform.system()} {_platform.release()} ({_platform.machine()})",
     ])
-
 
 class LocalePanel(Gtk.Box):
     """A panel showing locale details for a single locale."""
@@ -354,7 +342,6 @@ class LocalePanel(Gtk.Box):
             if self.string_list.get_string(i) == name:
                 self.combo.set_selected(i)
                 return
-
 
 # ---------------------------------------------------------------------------
 # Application window
@@ -541,8 +528,6 @@ class LocaleTesterWindow(Adw.ApplicationWindow):
         result = strftime_test(loc, fmt)
         self.st_result.set_label(result)
 
-
-
     def _on_export_clicked(self, *_args):
         dialog = Adw.MessageDialog(transient_for=self,
                                    heading=_("Export Data"),
@@ -594,7 +579,6 @@ class LocaleTesterWindow(Adw.ApplicationWindow):
 
     def _update_status_bar(self):
         self._status_bar.set_text("Last updated: " + _dt_now.now().strftime("%Y-%m-%d %H:%M"))
-
 
 class LocaleTesterApp(Adw.Application):
     def __init__(self):
@@ -653,19 +637,18 @@ class LocaleTesterApp(Adw.Application):
             license_type=Gtk.License.GPL_3_0,
             website="https://github.com/yeager/locale-tester",
             issue_url="https://github.com/yeager/locale-tester/issues",
-            translate_url="https://app.transifex.com/danielnylander/locale-tester/",
             comments=_("A localization tool by Daniel Nylander"),
             translator_credits=_("Translate this app: https://www.transifex.com/danielnylander/locale-tester/"),
         )
         about.set_debug_info(_get_system_info())
         about.set_debug_info_filename("locale-tester-debug.txt")
-        about.present(self.props.active_window)
+        about.add_link(_("Help translate"), "https://app.transifex.com/danielnylander/locale-tester/")
 
+        about.present(self.props.active_window)
 
 def main():
     app = LocaleTesterApp()
     return app.run(sys.argv)
-
 
 if __name__ == "__main__":
     sys.exit(main())

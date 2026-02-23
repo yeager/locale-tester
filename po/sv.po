@@ -1,6 +1,6 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
+# This file is distributed under the same license as the locale-tester package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: locale-tester\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-02-16 17:15+0100\n"
+"POT-Creation-Date: 2026-02-22 17:05+0100\n"
 "PO-Revision-Date: 2026-02-14 09:50+0000\n"
 "Last-Translator: Daniel Nylander <po@danielnylander.se>, 2026\n"
 "Language-Team: Swedish (https://app.transifex.com/danielnylander/teams/304767/sv/)\n"
@@ -168,6 +168,6 @@ msgstr "Ett lokalanpassningsverktyg av Daniel Nylander"
 
 #: src/locale_tester/main.py:658
 msgid ""
-"Translate this app: https://app.transifex.com/danielnylander/locale-tester/"
+"Translate this app: https://www.transifex.com/danielnylander/locale-tester/"
 msgstr ""
-"Översätt denna app: https://app.transifex.com/danielnylander/locale-tester/"
+"Översätt denna app: https://www.transifex.com/danielnylander/locale-tester/"

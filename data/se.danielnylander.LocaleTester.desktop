@@ -6,5 +6,6 @@ Exec=locale-tester
 Icon=locale-tester
 Terminal=false
 Type=Application
+StartupWMClass=se.danielnylander.LocaleTester
 Categories=Development;Translation;
 Keywords=locale;l10n;i18n;testing;

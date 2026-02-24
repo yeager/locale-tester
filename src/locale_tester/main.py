@@ -583,6 +583,7 @@ class LocaleTesterWindow(Adw.ApplicationWindow):
 class LocaleTesterApp(Adw.Application):
     def __init__(self):
         super().__init__(application_id=APP_ID, flags=Gio.ApplicationFlags.FLAGS_NONE)
+        GLib.set_application_name(_("Locale Tester"))
         if HAS_NOTIFY:
             _Notify.init("locale-tester")
         about_action = Gio.SimpleAction.new("about", None)
